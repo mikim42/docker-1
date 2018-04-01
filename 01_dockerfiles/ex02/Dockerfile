@@ -1,10 +1,3 @@
-FROM ruby
+FROM ft-rails:5.0.2-on-build
 
-RUN apt-get update && gem install rails && gem install bundler
-RUN mkdir -p /opt/app
-
-ONBUILD WORKDIR /opt/app
-ONBUILD ADD . /opt/app
-ONBUILD EXPOSE 3000
-ONBUILD RUN bundle install
-ONBUILD RUN rake db:migrate && rake db:seed
+CMD ["rails", "s", "-b", "0.0.0.0"]
