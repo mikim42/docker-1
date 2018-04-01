@@ -46,7 +46,7 @@ if [ -f "${TS_DIRECTORY}/.ts3server_license_accepted" ] || [[ "$*" = *"license_a
 then
   echo "Found a license agreement method; launching TeamSpeak"
 else
-  echo "Warning: license agreement method hasn't been passed; see the README (https://github.com/mbentley/docker-teamspeak#license-agreement) for how to do so with this Docker image"
+  echo "Warning: license agreement method hasn't been passed"
   echo -e "Note: if you're running TeamSpeak < 3.1.0; you can safely ignore this message\\n"
 fi
 

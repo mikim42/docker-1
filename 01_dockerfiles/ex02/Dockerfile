@@ -1,3 +1,3 @@
-FROM ft-rails:5.0.2-on-build
+FROM ft-rails
 
 CMD ["rails", "s", "-b", "0.0.0.0"]
